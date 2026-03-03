@@ -1,4 +1,7 @@
-# Status Panel for Grafana
+<div style="display: flex; align-items: center; gap: 15px;">
+  <img src="https://raw.githubusercontent.com/ToropovAV/status-panel/main/src/img/logo.svg" width="100">
+  <h1 style="margin: 0;">Status Panel for Grafana</h1>
+</div>
 
 A feature-rich Grafana panel plugin for monitoring system status with configurable thresholds, alert sounds, and visual feedback.
 
