@@ -1,7 +1,22 @@
 <div style="display: flex; align-items: center; gap: 15px;">
-  <img src="https://raw.githubusercontent.com/ToropovAV/status-panel/main/src/img/logo.svg" width="100">
+  <img src="https://raw.githubusercontent.com/ToropovAV/status-panel/main/src/img/logo.svg" width="90">
   <h1 style="margin: 0;">Status Panel for Grafana</h1>
 </div>
+
+<p align="left">
+  <a href="https://github.com/ToropovAV/status-panel/releases">
+    <img src="https://img.shields.io/github/v/release/ToropovAV/status-panel" alt="Latest version">
+  </a>
+  <a href="https://github.com/ToropovAV/status-panel/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/ToropovAV/status-panel" alt="License">
+  </a>
+  <img src="https://img.shields.io/badge/Grafana-10%2B-orange" alt="Grafana version">
+  <img src="https://img.shields.io/github/downloads/ToropovAV/status-panel/total" alt="Downloads">
+</p>
+
+---
+
+
 
 A feature-rich Grafana panel plugin for monitoring system status with configurable thresholds, alert sounds, and visual feedback.
 
