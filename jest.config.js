@@ -15,7 +15,6 @@ module.exports = {
       '@swc/jest',
       {
         jsc: {
-          baseUrl: './src',
           target: 'es2018',
           loose: false,
           parser: {
