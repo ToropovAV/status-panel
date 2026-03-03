@@ -1,0 +1,78 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build plugin
+        run: npm run build
+
+      - name: Sign plugin
+        run: npx @grafana/sign-plugin@latest
+        env:
+          GRAFANA_ACCESS_POLICY_TOKEN: ${{ secrets.GRAFANA_ACCESS_POLICY_TOKEN }}
+        # Remove this step until you receive a signing token from Grafana.
+        # The build will still work — the plugin just won't be signed yet.
+        continue-on-error: true
+
+      - name: Get plugin metadata
+        id: metadata
+        run: |
+          PLUGIN_ID=$(cat dist/plugin.json | jq -r .id)
+          PLUGIN_VERSION=$(cat dist/plugin.json | jq -r .info.version)
+          ARCHIVE_NAME="${PLUGIN_ID}-${PLUGIN_VERSION}.zip"
+          echo "plugin-id=${PLUGIN_ID}" >> $GITHUB_OUTPUT
+          echo "plugin-version=${PLUGIN_VERSION}" >> $GITHUB_OUTPUT
+          echo "archive=${ARCHIVE_NAME}" >> $GITHUB_OUTPUT
+
+      - name: Package plugin
+        run: |
+          mv dist ${{ steps.metadata.outputs.plugin-id }}
+          zip -r ${{ steps.metadata.outputs.archive }} \
+            ${{ steps.metadata.outputs.plugin-id }} \
+            --exclude "*.git*"
+
+      - name: Calculate SHA1
+        id: sha1
+        run: |
+          SHA1=$(sha1sum ${{ steps.metadata.outputs.archive }} | awk '{print $1}')
+          echo "sha1=${SHA1}" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ steps.metadata.outputs.archive }}
+          body: |
+            ## ${{ steps.metadata.outputs.plugin-id }} v${{ steps.metadata.outputs.plugin-version }}
+
+            ### Installation
+            Download the zip archive below and extract it into your Grafana plugins directory.
+
+            ```bash
+            unzip ${{ steps.metadata.outputs.archive }} -d /var/lib/grafana/plugins/
+            ```
+
+            **SHA1:** `${{ steps.sha1.outputs.sha1 }}`
+
+            See [README](https://github.com/${{ github.repository }}#installation) for full installation instructions.

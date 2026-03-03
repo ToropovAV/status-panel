@@ -1,0 +1,36 @@
+{
+  "type": "panel",
+  "name": "Status Panel",
+  "id": "status-panel",
+  "info": {
+    "description": "Status Panel for Grafana — displays system status with configurable thresholds, alerts, and visual feedback",
+    "author": {
+      "name": "Aleksey Toropov"
+    },
+    "keywords": ["status", "overview", "alert", "monitoring"],
+    "logos": {
+      "small": "img/logo.svg",
+      "large": "img/logo.svg"
+    },
+    "links": [
+      { "name": "GitHub", "url": "https://github.com/ToropovAV/status-panel" }
+    ],
+    "screenshots": [
+      { "name": "Panel — OK state",          "path": "docs/screenshots/panel-ok.png" },
+      { "name": "Panel — with metrics",      "path": "docs/screenshots/panel-average.png" },
+      { "name": "Settings — General",        "path": "docs/screenshots/settings-general.png" },
+      { "name": "Settings — Rules",          "path": "docs/screenshots/settings-rules.png" },
+      { "name": "Settings — Blink & Sound",  "path": "docs/screenshots/settings-blink-sound.png" },
+      { "name": "Settings — Colors",         "path": "docs/screenshots/settings-colors.png" },
+      { "name": "Settings — Link & Icon",    "path": "docs/screenshots/settings-link-icon.png" },
+      { "name": "Settings — Thresholds",     "path": "docs/screenshots/settings-thresholds.png" }
+    ],
+    "version": "1.0.0",
+    "updated": "2025-02-24"
+  },
+  "dependencies": {
+    "grafanaDependency": ">=10.0.0",
+    "grafanaVersion": "10.0.x",
+    "plugins": []
+  }
+}

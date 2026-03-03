@@ -1,0 +1,21 @@
+node_modules/
+.config/
+dist/
+.cache/
+.yarn/
+*.js.map
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Environment
+.env
+.env.local
+
+# Grafana dev environment
+docker-compose.override.yml

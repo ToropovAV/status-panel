@@ -1,0 +1,368 @@
+{
+  "__inputs": [],
+  "__elements": {},
+  "__requires": [
+    {
+      "type": "grafana",
+      "id": "grafana",
+      "name": "Grafana",
+      "version": "10.0.0"
+    },
+    {
+      "type": "datasource",
+      "id": "grafana-testdata-datasource",
+      "name": "TestData DB",
+      "version": "1.0.0"
+    },
+    {
+      "type": "panel",
+      "id": "status-panel",
+      "name": "Status Panel",
+      "version": "1.0.0"
+    }
+  ],
+  "annotations": { "list": [] },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": null,
+  "links": [],
+  "panels": [
+    {
+      "id": 1,
+      "type": "status-panel",
+      "title": "",
+      "gridPos": { "h": 6, "w": 8, "x": 0, "y": 0 },
+      "datasource": { "type": "grafana-testdata-datasource", "uid": "-- Grafana --" },
+      "targets": [
+        {
+          "datasource": { "type": "grafana-testdata-datasource", "uid": "-- Grafana --" },
+          "refId": "A",
+          "scenarioId": "random_walk",
+          "alias": "CPU Utilization",
+          "min": 0,
+          "max": 100
+        }
+      ],
+      "options": {
+        "panelName": "Web Server",
+        "emblem": "🖥",
+        "modePanel": "line",
+        "statePanel": "enable",
+        "switchToNaOnError": true,
+        "dataErrorMessage": "",
+        "fontSizeTitle": 18,
+        "fontSizeMetrics": 12,
+        "cornerRadius": 20,
+        "colorizeMetrics": true,
+        "showTimestamp": true,
+        "timestampFormat": "relative",
+        "iconType": "none",
+        "iconBuiltin": "",
+        "iconUrl": "",
+        "iconSize": 20,
+        "dataLink": "",
+        "openLinkInNewTab": true,
+        "blink": true,
+        "blinkDuration": 10,
+        "soundEnabled": false,
+        "soundSettings": {
+          "volume": 70,
+          "soundConfig": {
+            "information": { "mode": "builtin", "customUrl": "" },
+            "warning":     { "mode": "builtin", "customUrl": "" },
+            "average":     { "mode": "builtin", "customUrl": "" },
+            "high":        { "mode": "builtin", "customUrl": "" },
+            "disaster":    { "mode": "custom",  "customUrl": "" }
+          }
+        },
+        "colorOK":          "#1eff00",
+        "colorInformation":  "#5794F2",
+        "colorWarning":      "#faf82a",
+        "colorAverage":      "#ffa230",
+        "colorHigh":         "#fa6400fc",
+        "colorDisaster":     "#ff0000",
+        "colorDisable":      "#6E6E6E",
+        "colorNa":           "#B0B0B0",
+        "textColorEnabled": true,
+        "textColor": "#000000",
+        "ruleConfig": {
+          "rules": [
+            {
+              "id": "a1b2c3d4-0001-0001-0001-000000000001",
+              "name": "CPU Utilization",
+              "order": 0,
+              "seriesMatch": "CPU Utilization",
+              "alias": "CPU",
+              "description": "Current CPU load of the web server",
+              "metricURL": "",
+              "displayMode": "number",
+              "showName": true,
+              "showValue": true,
+              "showRule": true,
+              "showOnlyOnThreshold": false,
+              "reverseLogic": false,
+              "unit": "percent",
+              "decimalPlaces": 1,
+              "numberThreshold": {
+                "information": "",
+                "warning": "50",
+                "average": "70",
+                "high": "85",
+                "disaster": "95"
+              },
+              "stringThreshold": {
+                "information": "",
+                "warning": "",
+                "average": "",
+                "high": "",
+                "disaster": ""
+              },
+              "logicExpress": false,
+              "logicalMode": "eq",
+              "logicExpressValue": ""
+            }
+          ]
+        }
+      },
+      "fieldConfig": { "defaults": {}, "overrides": [] },
+      "transformations": []
+    },
+    {
+      "id": 2,
+      "type": "status-panel",
+      "title": "",
+      "gridPos": { "h": 6, "w": 8, "x": 8, "y": 0 },
+      "datasource": { "type": "grafana-testdata-datasource", "uid": "-- Grafana --" },
+      "targets": [
+        {
+          "datasource": { "type": "grafana-testdata-datasource", "uid": "-- Grafana --" },
+          "refId": "A",
+          "scenarioId": "random_walk",
+          "alias": "CPU Utilization",
+          "min": 0,
+          "max": 100
+        },
+        {
+          "datasource": { "type": "grafana-testdata-datasource", "uid": "-- Grafana --" },
+          "refId": "B",
+          "scenarioId": "random_walk",
+          "alias": "RAM Utilization",
+          "min": 20,
+          "max": 90
+        },
+        {
+          "datasource": { "type": "grafana-testdata-datasource", "uid": "-- Grafana --" },
+          "refId": "C",
+          "scenarioId": "random_walk",
+          "alias": "Disk Usage",
+          "min": 40,
+          "max": 95
+        }
+      ],
+      "options": {
+        "panelName": "Database Server",
+        "emblem": "🗄",
+        "modePanel": "line",
+        "statePanel": "enable",
+        "switchToNaOnError": true,
+        "dataErrorMessage": "",
+        "fontSizeTitle": 18,
+        "fontSizeMetrics": 12,
+        "cornerRadius": 20,
+        "colorizeMetrics": true,
+        "showTimestamp": true,
+        "timestampFormat": "relative",
+        "iconType": "none",
+        "iconBuiltin": "",
+        "iconUrl": "",
+        "iconSize": 20,
+        "dataLink": "",
+        "openLinkInNewTab": true,
+        "blink": true,
+        "blinkDuration": 10,
+        "soundEnabled": false,
+        "soundSettings": {
+          "volume": 70,
+          "soundConfig": {
+            "information": { "mode": "builtin", "customUrl": "" },
+            "warning":     { "mode": "builtin", "customUrl": "" },
+            "average":     { "mode": "builtin", "customUrl": "" },
+            "high":        { "mode": "builtin", "customUrl": "" },
+            "disaster":    { "mode": "custom",  "customUrl": "" }
+          }
+        },
+        "colorOK":          "#1eff00",
+        "colorInformation":  "#5794F2",
+        "colorWarning":      "#faf82a",
+        "colorAverage":      "#ffa230",
+        "colorHigh":         "#fa6400fc",
+        "colorDisaster":     "#ff0000",
+        "colorDisable":      "#6E6E6E",
+        "colorNa":           "#B0B0B0",
+        "textColorEnabled": true,
+        "textColor": "#000000",
+        "ruleConfig": {
+          "rules": [
+            {
+              "id": "a1b2c3d4-0002-0002-0002-000000000002",
+              "name": "CPU Utilization",
+              "order": 0,
+              "seriesMatch": "CPU Utilization",
+              "alias": "CPU",
+              "description": "CPU load of the database server",
+              "metricURL": "",
+              "displayMode": "number",
+              "showName": true,
+              "showValue": true,
+              "showRule": true,
+              "showOnlyOnThreshold": false,
+              "reverseLogic": false,
+              "unit": "percent",
+              "decimalPlaces": 1,
+              "numberThreshold": {
+                "information": "",
+                "warning": "50",
+                "average": "70",
+                "high": "85",
+                "disaster": "95"
+              },
+              "stringThreshold": {
+                "information": "", "warning": "", "average": "", "high": "", "disaster": ""
+              },
+              "logicExpress": false,
+              "logicalMode": "eq",
+              "logicExpressValue": ""
+            },
+            {
+              "id": "a1b2c3d4-0002-0002-0002-000000000003",
+              "name": "RAM Utilization",
+              "order": 1,
+              "seriesMatch": "RAM Utilization",
+              "alias": "RAM",
+              "description": "RAM usage of the database server",
+              "metricURL": "",
+              "displayMode": "number",
+              "showName": true,
+              "showValue": true,
+              "showRule": true,
+              "showOnlyOnThreshold": false,
+              "reverseLogic": false,
+              "unit": "percent",
+              "decimalPlaces": 1,
+              "numberThreshold": {
+                "information": "",
+                "warning": "60",
+                "average": "75",
+                "high": "88",
+                "disaster": "95"
+              },
+              "stringThreshold": {
+                "information": "", "warning": "", "average": "", "high": "", "disaster": ""
+              },
+              "logicExpress": false,
+              "logicalMode": "eq",
+              "logicExpressValue": ""
+            },
+            {
+              "id": "a1b2c3d4-0002-0002-0002-000000000004",
+              "name": "Disk Usage",
+              "order": 2,
+              "seriesMatch": "Disk Usage",
+              "alias": "Disk",
+              "description": "Disk usage of the database server",
+              "metricURL": "",
+              "displayMode": "number",
+              "showName": true,
+              "showValue": true,
+              "showRule": true,
+              "showOnlyOnThreshold": false,
+              "reverseLogic": false,
+              "unit": "percent",
+              "decimalPlaces": 1,
+              "numberThreshold": {
+                "information": "",
+                "warning": "70",
+                "average": "80",
+                "high": "90",
+                "disaster": "95"
+              },
+              "stringThreshold": {
+                "information": "", "warning": "", "average": "", "high": "", "disaster": ""
+              },
+              "logicExpress": false,
+              "logicalMode": "eq",
+              "logicExpressValue": ""
+            }
+          ]
+        }
+      },
+      "fieldConfig": { "defaults": {}, "overrides": [] },
+      "transformations": []
+    },
+    {
+      "id": 3,
+      "type": "status-panel",
+      "title": "",
+      "gridPos": { "h": 6, "w": 8, "x": 16, "y": 0 },
+      "datasource": { "type": "grafana-testdata-datasource", "uid": "-- Grafana --" },
+      "targets": [],
+      "options": {
+        "panelName": "Backup Service",
+        "emblem": "💾",
+        "modePanel": "line",
+        "statePanel": "na",
+        "switchToNaOnError": true,
+        "dataErrorMessage": "No data available",
+        "fontSizeTitle": 18,
+        "fontSizeMetrics": 12,
+        "cornerRadius": 20,
+        "colorizeMetrics": true,
+        "showTimestamp": true,
+        "timestampFormat": "relative",
+        "iconType": "none",
+        "iconBuiltin": "",
+        "iconUrl": "",
+        "iconSize": 20,
+        "dataLink": "",
+        "openLinkInNewTab": true,
+        "blink": true,
+        "blinkDuration": 10,
+        "soundEnabled": false,
+        "soundSettings": {
+          "volume": 70,
+          "soundConfig": {
+            "information": { "mode": "builtin", "customUrl": "" },
+            "warning":     { "mode": "builtin", "customUrl": "" },
+            "average":     { "mode": "builtin", "customUrl": "" },
+            "high":        { "mode": "builtin", "customUrl": "" },
+            "disaster":    { "mode": "custom",  "customUrl": "" }
+          }
+        },
+        "colorOK":          "#1eff00",
+        "colorInformation":  "#5794F2",
+        "colorWarning":      "#faf82a",
+        "colorAverage":      "#ffa230",
+        "colorHigh":         "#fa6400fc",
+        "colorDisaster":     "#ff0000",
+        "colorDisable":      "#6E6E6E",
+        "colorNa":           "#B0B0B0",
+        "textColorEnabled": true,
+        "textColor": "#000000",
+        "ruleConfig": { "rules": [] }
+      },
+      "fieldConfig": { "defaults": {}, "overrides": [] },
+      "transformations": []
+    }
+  ],
+  "refresh": "5s",
+  "schemaVersion": 38,
+  "tags": ["status-panel", "example"],
+  "templating": { "list": [] },
+  "time": { "from": "now-5m", "to": "now" },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "Status Panel — Example Dashboard",
+  "uid": "status-panel-example",
+  "version": 1
+}

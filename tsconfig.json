@@ -1,0 +1,11 @@
+{
+  "extends": "./.config/tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "baseUrl": "./src",
+    "paths": {
+      "types": ["types"]
+    }
+  },
+  "include": ["src", ".config/types"]
+}
