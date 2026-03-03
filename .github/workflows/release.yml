@@ -25,6 +25,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Install .config dependencies
+        run: |
+          if [ -f .config/package.json ]; then
+            npm ci --prefix .config
+          fi
+
       - name: Build plugin
         run: npm run build
 
@@ -32,8 +38,6 @@ jobs:
         run: npx @grafana/sign-plugin@latest
         env:
           GRAFANA_ACCESS_POLICY_TOKEN: ${{ secrets.GRAFANA_ACCESS_POLICY_TOKEN }}
-        # Remove this step until you receive a signing token from Grafana.
-        # The build will still work — the plugin just won't be signed yet.
         continue-on-error: true
 
       - name: Get plugin metadata
