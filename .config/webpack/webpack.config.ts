@@ -46,7 +46,7 @@ const config = async (env: Record<string, string>): Promise<Configuration> => ({
           loader: 'swc-loader',
           options: {
             jsc: {
-              baseUrl: './src',
+              baseUrl: path.resolve(process.cwd(), 'src'),
               target: 'es2018',
               loose: false,
               parser: { syntax: 'typescript', tsx: true, decorators: false, dynamicImport: true },
