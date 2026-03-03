@@ -10,7 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### ✨ Added — Complete rewrite for Grafana 10+
 
-This is a full rewrite of the abandoned `serrrios-statusoverview-panel-2` plugin with no shared code.
+This is a full rewrite of the abandoned `serrrios-statusoverview-panel` plugin with no shared code.
 
 #### Visual
 - Status levels: OK, Information, Warning, Average, High, Disaster, Disabled, N/A

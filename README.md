@@ -112,7 +112,7 @@ A feature-rich Grafana panel plugin for monitoring system status with configurab
 ### Option 3 — Build from source
 
 ```bash
-git clone https://github.com/your-username/status-panel.git
+git clone https://github.com/ToropovAV/status-panel.git
 cd status-panel
 npm install
 npm run build
