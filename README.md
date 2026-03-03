@@ -1,6 +1,6 @@
 <table border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td><img src="https://raw.githubusercontent.com/ToropovAV/status-panel/main/src/img/logo.svg" width="80"></td>
+    <td><img src="https://raw.githubusercontent.com/ToropovAV/status-panel/main/src/img/logo.svg" width="120"></td>
     <td><h1 style="margin: 0; padding-left: 15px;">Status Panel for Grafana</h1></td>
   </tr>
 </table>
