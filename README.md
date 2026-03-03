@@ -1,7 +1,9 @@
-<div style="display: flex; align-items: center; gap: 15px;">
-  <img src="https://raw.githubusercontent.com/ToropovAV/status-panel/main/src/img/logo.svg" width="90">
-  <h1 style="margin: 0;">Status Panel for Grafana</h1>
-</div>
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/ToropovAV/status-panel/main/src/img/logo.svg" width="80"></td>
+    <td><h1 style="margin: 0; padding-left: 15px;">Status Panel for Grafana</h1></td>
+  </tr>
+</table>
 
 <p align="left">
   <a href="https://github.com/ToropovAV/status-panel/releases">
