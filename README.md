@@ -18,12 +18,10 @@
 
 ---
 
-
-
 A feature-rich Grafana panel plugin for monitoring system status with configurable thresholds, alert sounds, and visual feedback.
 
-![Panel OK State](docs/screenshots/panel-ok.png)
-![Panel with Metrics](docs/screenshots/panel-average.png)
+![Panel OK State](https://raw.githubusercontent.com/ToropovAV/status-panel/main/docs/screenshots/panel-ok.png)
+![Panel with Metrics](https://raw.githubusercontent.com/ToropovAV/status-panel/main/docs/screenshots/panel-average.png)
 
 ---
 
@@ -77,19 +75,19 @@ A feature-rich Grafana panel plugin for monitoring system status with configurab
 
 | Panel — OK | Panel — Multiple statuses |
 |---|---|
-| ![OK](docs/screenshots/panel-ok.png) | ![Average](docs/screenshots/panel-average.png) |
+| ![OK](https://raw.githubusercontent.com/ToropovAV/status-panel/main/docs/screenshots/panel-ok.png) | ![Average](https://raw.githubusercontent.com/ToropovAV/status-panel/main/docs/screenshots/panel-average.png) |
 
 | General Settings | Link & Icon Settings |
 |---|---|
-| ![General](docs/screenshots/settings-general.png) | ![Link Icon](docs/screenshots/settings-link-icon.png) |
+| ![General](https://raw.githubusercontent.com/ToropovAV/status-panel/main/docs/screenshots/settings-general.png) | ![Link Icon](https://raw.githubusercontent.com/ToropovAV/status-panel/main/docs/screenshots/settings-link-icon.png) |
 
 | Blink & Sound Settings | Colors Settings |
 |---|---|
-| ![Sound](docs/screenshots/settings-blink-sound.png) | ![Colors](docs/screenshots/settings-colors.png) |
+| ![Sound](https://raw.githubusercontent.com/ToropovAV/status-panel/main/docs/screenshots/settings-blink-sound.png) | ![Colors](https://raw.githubusercontent.com/ToropovAV/status-panel/main/docs/screenshots/settings-colors.png) |
 
 | Rule Editor | Threshold Settings |
 |---|---|
-| ![Rules](docs/screenshots/settings-rules.png) | ![Thresholds](docs/screenshots/settings-thresholds.png) |
+| ![Rules](https://raw.githubusercontent.com/ToropovAV/status-panel/main/docs/screenshots/settings-rules.png) | ![Thresholds](https://raw.githubusercontent.com/ToropovAV/status-panel/main/docs/screenshots/settings-thresholds.png) |
 
 ---
 
@@ -108,7 +106,7 @@ A feature-rich Grafana panel plugin for monitoring system status with configurab
 
 ### Option 2 — Manual installation
 
-1. Download the latest release archive from the [Releases](../../releases) page.
+1. Download the latest release archive from the [Releases](https://github.com/ToropovAV/status-panel/releases) page.
 
 2. Extract it into your Grafana plugins directory:
    ```bash
@@ -235,8 +233,8 @@ Rules can be exported to a JSON file and re-imported into any panel:
 1. Click **Export** in the Rules editor — saves `status-panel-rules.json`.
 2. On another panel, click **Import** and select the file — rules are appended to existing ones.
 
-
 ---
+
 ## Status Levels
 
 Levels are evaluated in ascending severity order. The panel displays the **worst** active status across all rules.
@@ -252,9 +250,10 @@ Levels are evaluated in ascending severity order. The panel displays the **worst
 | **Disabled** | Panel manually set to disabled state |
 | **N/A** | No data, data source error, or panel set to N/A mode |
 
-
 ---
-# Data Sources
+
+## Data Sources
+
 The plugin is designed to work with any data sources and has been tested with:
 - [Prometheus](https://grafana.com/docs/grafana/latest/datasources/prometheus/)
 - [Zabbix](https://grafana.com/grafana/plugins/alexanderzobnin-zabbix-app/)
@@ -296,7 +295,7 @@ python migrate_panel.py -i dashboard.json -o dashboard_migrated.json
 python migrate_panel.py -i ./panels -o ./panels
 ```
 
-The script is located in the [`tools/`](tools/) directory of this repository.
+The script is located in the [tools/](https://github.com/ToropovAV/status-panel/tree/main/tools) directory of this repository.
 
 ---
 
@@ -346,14 +345,9 @@ src/
 
 ---
 
-
-
-
-
-
 ## License
 
-Apache License 2.0 — see [LICENSE](LICENSE) for details.
+Apache License 2.0 — see [LICENSE](https://github.com/ToropovAV/status-panel/blob/main/LICENSE) for details.
 
 ---
 

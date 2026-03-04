@@ -16,14 +16,14 @@
       { "name": "GitHub", "url": "https://github.com/ToropovAV/status-panel" }
     ],
     "screenshots": [
-      { "name": "Panel — OK state",          "path": "docs/screenshots/panel-ok.png" },
-      { "name": "Panel — with metrics",      "path": "docs/screenshots/panel-average.png" },
-      { "name": "Settings — General",        "path": "docs/screenshots/settings-general.png" },
-      { "name": "Settings — Rules",          "path": "docs/screenshots/settings-rules.png" },
-      { "name": "Settings — Blink & Sound",  "path": "docs/screenshots/settings-blink-sound.png" },
-      { "name": "Settings — Colors",         "path": "docs/screenshots/settings-colors.png" },
-      { "name": "Settings — Link & Icon",    "path": "docs/screenshots/settings-link-icon.png" },
-      { "name": "Settings — Thresholds",     "path": "docs/screenshots/settings-thresholds.png" }
+      { "name": "Panel — OK state",         "path": "img/screenshot-panel-ok.png" },
+      { "name": "Panel — Multiple statuses","path": "img/screenshot-panel-average.png" },
+      { "name": "Settings — General",       "path": "img/screenshot-settings-general.png" },
+      { "name": "Settings — Rules",         "path": "img/screenshot-settings-rules.png" },
+      { "name": "Settings — Blink & Sound", "path": "img/screenshot-settings-blink-sound.png" },
+      { "name": "Settings — Colors",        "path": "img/screenshot-settings-colors.png" },
+      { "name": "Settings — Link & Icon",   "path": "img/screenshot-settings-link-icon.png" },
+      { "name": "Settings — Thresholds",    "path": "img/screenshot-settings-thresholds.png" }
     ],
     "version": "1.0.0",
     "updated": "2025-02-24"

@@ -46,7 +46,7 @@ const config = async (env: Record<string, string>): Promise<Configuration> => ({
           loader: 'swc-loader',
           options: {
             jsc: {
-              baseUrl: path.resolve(process.cwd(), 'src'),
+              baseUrl: './src',
               target: 'es2018',
               loose: false,
               parser: { syntax: 'typescript', tsx: true, decorators: false, dynamicImport: true },
@@ -95,13 +95,19 @@ const config = async (env: Record<string, string>): Promise<Configuration> => ({
       patterns: [
         { from: hasReadme() ? 'README.md' : '../README.md', to: '.', force: true },
         { from: 'plugin.json', to: '.' },
-        { from: '../LICENSE', to: '.', noErrorOnMissing: true },
+        { from: '../LICENSE', to: '.', noErrorOnMissing: false },
         { from: '../CHANGELOG.md', to: '.', force: true, noErrorOnMissing: true },
         { from: '**/*.json', to: '.' },
         { from: '**/*.svg', to: '.', noErrorOnMissing: true },
         { from: '**/*.png', to: '.', noErrorOnMissing: true },
         { from: '**/*.html', to: '.', noErrorOnMissing: true },
         { from: 'img/**/*', to: '.', noErrorOnMissing: true },
+        // Copy screenshots to img/ for plugin catalog
+        {
+          from: '../docs/screenshots/*.png',
+          to: 'img/screenshot-[name][ext]',
+          noErrorOnMissing: true,
+        },
         { from: 'libs/**/*', to: '.', noErrorOnMissing: true },
         { from: 'static/**/*', to: '.', noErrorOnMissing: true },
       ],
@@ -125,3 +131,4 @@ const config = async (env: Record<string, string>): Promise<Configuration> => ({
 });
 
 export default config;
+
