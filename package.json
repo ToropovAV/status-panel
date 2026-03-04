@@ -16,7 +16,7 @@
   "license": "Apache-2.0",
   "overrides": {
     "minimatch": "^10.0.0",
-    "serialize-javascript": "^6.0.2"
+    "serialize-javascript": "^7.0.0"
   },
   "devDependencies": {
     "@grafana/eslint-config": "^7.0.0",
