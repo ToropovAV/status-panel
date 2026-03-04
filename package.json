@@ -19,6 +19,7 @@
     "serialize-javascript": "^7.0.0"
   },
   "devDependencies": {
+    "@grafana/create-plugin": "^6.0.0",
     "@grafana/eslint-config": "^7.0.0",
     "@grafana/tsconfig": "^2.0.0",
     "@swc/core": "^1.5.0",
