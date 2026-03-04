@@ -3,18 +3,91 @@ name: Release
 on:
   push:
     tags:
-      - 'v*'
+      - 'v*.*.*'
+
+permissions:
+  id-token: write
+  contents: write
+  attestations: write
 
 jobs:
   release:
-    permissions:
-      id-token: write
-      contents: write
-      attestations: write
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: grafana/plugin-actions/build-plugin@main
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          policy_token: ${{ secrets.GRAFANA_ACCESS_POLICY_TOKEN }}
-          attestation: true
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install .config dependencies
+        run: |
+          if [ -f .config/package.json ]; then
+            npm ci --prefix .config
+          fi
+
+      - name: Build plugin
+        run: npm run build
+        env:
+          TS_NODE_PROJECT: ${{ github.workspace }}/tsconfig.json
+          NODE_OPTIONS: "--max-old-space-size=4096"
+
+      - name: Sign plugin
+        run: npx @grafana/sign-plugin@latest
+        env:
+          GRAFANA_ACCESS_POLICY_TOKEN: ${{ secrets.GRAFANA_ACCESS_POLICY_TOKEN }}
+        continue-on-error: true
+
+      - name: Get plugin metadata
+        id: metadata
+        run: |
+          PLUGIN_ID=$(cat dist/plugin.json | jq -r .id)
+          PLUGIN_VERSION=$(cat dist/plugin.json | jq -r .info.version)
+          ARCHIVE_NAME="${PLUGIN_ID}-${PLUGIN_VERSION}.zip"
+          echo "plugin-id=${PLUGIN_ID}" >> $GITHUB_OUTPUT
+          echo "plugin-version=${PLUGIN_VERSION}" >> $GITHUB_OUTPUT
+          echo "archive=${ARCHIVE_NAME}" >> $GITHUB_OUTPUT
+
+      - name: Package plugin
+        run: |
+          mv dist ${{ steps.metadata.outputs.plugin-id }}
+          zip -r ${{ steps.metadata.outputs.archive }} \
+            ${{ steps.metadata.outputs.plugin-id }} \
+            --exclude "*.git*"
+
+      - name: Generate artifact attestation
+        uses: actions/attest-build-provenance@v1
+        with:
+          subject-path: ${{ steps.metadata.outputs.archive }}
+        continue-on-error: true
+
+      - name: Calculate SHA1
+        id: sha1
+        run: |
+          SHA1=$(sha1sum ${{ steps.metadata.outputs.archive }} | awk '{print $1}')
+          echo "sha1=${SHA1}" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ steps.metadata.outputs.archive }}
+          body: |
+            ## ${{ steps.metadata.outputs.plugin-id }} v${{ steps.metadata.outputs.plugin-version }}
+
+            ### Installation
+            Download the zip archive below and extract it into your Grafana plugins directory.
+
+            ```bash
+            unzip ${{ steps.metadata.outputs.archive }} -d /var/lib/grafana/plugins/
+            ```
+
+            **SHA1:** `${{ steps.sha1.outputs.sha1 }}`
+
+            See [README](https://github.com/${{ github.repository }}#installation) for full installation instructions.
