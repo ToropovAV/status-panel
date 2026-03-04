@@ -131,7 +131,7 @@ A feature-rich Grafana panel plugin for monitoring system status with configurab
 
 ```bash
 git clone https://github.com/ToropovAV/status-panel.git
-cd toropovav-status-panel
+cd status-panel
 npm install
 npm run build
 ```
