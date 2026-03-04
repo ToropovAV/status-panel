@@ -2,9 +2,9 @@ services:
   grafana:
     user: root
     container_name: 'toropovav-status-panel'
-
     build:
-      context: .
+      context: ..
+      dockerfile: .config/Dockerfile
       args:
         grafana_image: ${GRAFANA_IMAGE:-grafana-enterprise}
         grafana_version: ${GRAFANA_VERSION:-12.4.0}
@@ -16,7 +16,6 @@ services:
       - ../dist:/var/lib/grafana/plugins/toropovav-status-panel
       - ../provisioning:/etc/grafana/provisioning
       - ..:/root/toropovav-status-panel
-
     environment:
       NODE_ENV: development
       GF_LOG_FILTERS: plugin.toropovav-status-panel:debug

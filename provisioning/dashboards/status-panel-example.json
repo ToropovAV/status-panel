@@ -34,25 +34,33 @@
       "id": 1,
       "type": "toropovav-status-panel",
       "title": "",
-      "gridPos": {
-        "h": 6,
-        "w": 8,
-        "x": 0,
-        "y": 0
-      },
+      "gridPos": { "h": 6, "w": 8, "x": 0, "y": 0 },
       "datasource": {
         "type": "grafana-testdata-datasource",
         "uid": "-- Grafana --"
       },
       "targets": [
         {
-          "datasource": {
-            "type": "grafana-testdata-datasource",
-            "uid": "-- Grafana --"
-          },
+          "datasource": { "type": "grafana-testdata-datasource", "uid": "-- Grafana --" },
           "refId": "A",
           "scenarioId": "random_walk",
-          "alias": "CPU Utilization",
+          "alias": "A-series",
+          "min": 0,
+          "max": 100
+        },
+        {
+          "datasource": { "type": "grafana-testdata-datasource", "uid": "-- Grafana --" },
+          "refId": "B",
+          "scenarioId": "random_walk",
+          "alias": "B-series",
+          "min": 0,
+          "max": 100
+        },
+        {
+          "datasource": { "type": "grafana-testdata-datasource", "uid": "-- Grafana --" },
+          "refId": "C",
+          "scenarioId": "random_walk",
+          "alias": "C-series",
           "min": 0,
           "max": 100
         }
@@ -82,26 +90,11 @@
         "soundSettings": {
           "volume": 70,
           "soundConfig": {
-            "information": {
-              "mode": "builtin",
-              "customUrl": ""
-            },
-            "warning": {
-              "mode": "builtin",
-              "customUrl": ""
-            },
-            "average": {
-              "mode": "builtin",
-              "customUrl": ""
-            },
-            "high": {
-              "mode": "builtin",
-              "customUrl": ""
-            },
-            "disaster": {
-              "mode": "custom",
-              "customUrl": "https://storage.yandexcloud.net/alfaleasing/Grafana/Kaspersky_pig.mp3"
-            }
+            "information": { "mode": "builtin", "customUrl": "" },
+            "warning": { "mode": "builtin", "customUrl": "" },
+            "average": { "mode": "builtin", "customUrl": "" },
+            "high": { "mode": "builtin", "customUrl": "" },
+            "disaster": { "mode": "custom", "customUrl": "https://storage.yandexcloud.net/alfaleasing/Grafana/Kaspersky_pig.mp3" }
           }
         },
         "colorOK": "#1eff00",
@@ -122,7 +115,7 @@
               "order": 0,
               "seriesMatch": ".*series",
               "alias": "CPU",
-              "description": "Current CPU load of the web server",
+              "description": "Current CPU load",
               "metricURL": "",
               "displayMode": "number",
               "showName": true,
@@ -139,13 +132,7 @@
                 "high": "85",
                 "disaster": "95"
               },
-              "stringThreshold": {
-                "information": "",
-                "warning": "",
-                "average": "",
-                "high": "",
-                "disaster": ""
-              },
+              "stringThreshold": { "information": "", "warning": "", "average": "", "high": "", "disaster": "" },
               "logicExpress": false,
               "logicalMode": "eq",
               "logicExpressValue": ""
@@ -153,57 +140,40 @@
           ]
         }
       },
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
+      "fieldConfig": { "defaults": {}, "overrides": [] },
       "transformations": []
     },
     {
       "id": 2,
       "type": "toropovav-status-panel",
       "title": "",
-      "gridPos": {
-        "h": 6,
-        "w": 8,
-        "x": 8,
-        "y": 0
-      },
+      "gridPos": { "h": 6, "w": 8, "x": 8, "y": 0 },
       "datasource": {
         "type": "grafana-testdata-datasource",
         "uid": "-- Grafana --"
       },
       "targets": [
         {
-          "datasource": {
-            "type": "grafana-testdata-datasource",
-            "uid": "-- Grafana --"
-          },
+          "datasource": { "type": "grafana-testdata-datasource", "uid": "-- Grafana --" },
           "refId": "A",
           "scenarioId": "random_walk",
-          "alias": "CPU Utilization",
+          "alias": "A-series",
           "min": 0,
           "max": 100
         },
         {
-          "datasource": {
-            "type": "grafana-testdata-datasource",
-            "uid": "-- Grafana --"
-          },
+          "datasource": { "type": "grafana-testdata-datasource", "uid": "-- Grafana --" },
           "refId": "B",
           "scenarioId": "random_walk",
-          "alias": "RAM Utilization",
+          "alias": "B-series",
           "min": 20,
           "max": 90
         },
         {
-          "datasource": {
-            "type": "grafana-testdata-datasource",
-            "uid": "-- Grafana --"
-          },
+          "datasource": { "type": "grafana-testdata-datasource", "uid": "-- Grafana --" },
           "refId": "C",
           "scenarioId": "random_walk",
-          "alias": "Disk Usage",
+          "alias": "C-series",
           "min": 40,
           "max": 95
         }
@@ -233,26 +203,11 @@
         "soundSettings": {
           "volume": 70,
           "soundConfig": {
-            "information": {
-              "mode": "builtin",
-              "customUrl": ""
-            },
-            "warning": {
-              "mode": "builtin",
-              "customUrl": ""
-            },
-            "average": {
-              "mode": "builtin",
-              "customUrl": ""
-            },
-            "high": {
-              "mode": "builtin",
-              "customUrl": ""
-            },
-            "disaster": {
-              "mode": "custom",
-              "customUrl": "https://storage.yandexcloud.net/alfaleasing/Grafana/Kaspersky_pig.mp3"
-            }
+            "information": { "mode": "builtin", "customUrl": "" },
+            "warning": { "mode": "builtin", "customUrl": "" },
+            "average": { "mode": "builtin", "customUrl": "" },
+            "high": { "mode": "builtin", "customUrl": "" },
+            "disaster": { "mode": "custom", "customUrl": "https://storage.yandexcloud.net/alfaleasing/Grafana/Kaspersky_pig.mp3" }
           }
         },
         "colorOK": "#1eff00",
@@ -283,20 +238,8 @@
               "reverseLogic": false,
               "unit": "percent",
               "decimalPlaces": 1,
-              "numberThreshold": {
-                "information": "",
-                "warning": "50",
-                "average": "70",
-                "high": "85",
-                "disaster": "95"
-              },
-              "stringThreshold": {
-                "information": "",
-                "warning": "",
-                "average": "",
-                "high": "",
-                "disaster": ""
-              },
+              "numberThreshold": { "information": "", "warning": "50", "average": "70", "high": "85", "disaster": "95" },
+              "stringThreshold": { "information": "", "warning": "", "average": "", "high": "", "disaster": "" },
               "logicExpress": false,
               "logicalMode": "eq",
               "logicExpressValue": ""
@@ -317,20 +260,8 @@
               "reverseLogic": false,
               "unit": "percent",
               "decimalPlaces": 1,
-              "numberThreshold": {
-                "information": "",
-                "warning": "60",
-                "average": "75",
-                "high": "88",
-                "disaster": "95"
-              },
-              "stringThreshold": {
-                "information": "",
-                "warning": "",
-                "average": "",
-                "high": "",
-                "disaster": ""
-              },
+              "numberThreshold": { "information": "", "warning": "60", "average": "75", "high": "88", "disaster": "95" },
+              "stringThreshold": { "information": "", "warning": "", "average": "", "high": "", "disaster": "" },
               "logicExpress": false,
               "logicalMode": "eq",
               "logicExpressValue": ""
@@ -351,20 +282,8 @@
               "reverseLogic": false,
               "unit": "percent",
               "decimalPlaces": 1,
-              "numberThreshold": {
-                "information": "",
-                "warning": "70",
-                "average": "80",
-                "high": "90",
-                "disaster": "95"
-              },
-              "stringThreshold": {
-                "information": "",
-                "warning": "",
-                "average": "",
-                "high": "",
-                "disaster": ""
-              },
+              "numberThreshold": { "information": "", "warning": "70", "average": "80", "high": "90", "disaster": "95" },
+              "stringThreshold": { "information": "", "warning": "", "average": "", "high": "", "disaster": "" },
               "logicExpress": false,
               "logicalMode": "eq",
               "logicExpressValue": ""
@@ -372,34 +291,51 @@
           ]
         }
       },
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
+      "fieldConfig": { "defaults": {}, "overrides": [] },
       "transformations": []
     },
     {
       "id": 3,
       "type": "toropovav-status-panel",
       "title": "",
-      "gridPos": {
-        "h": 6,
-        "w": 8,
-        "x": 16,
-        "y": 0
-      },
+      "gridPos": { "h": 6, "w": 8, "x": 16, "y": 0 },
       "datasource": {
         "type": "grafana-testdata-datasource",
         "uid": "-- Grafana --"
       },
-      "targets": [],
+      "targets": [
+        {
+          "datasource": { "type": "grafana-testdata-datasource", "uid": "-- Grafana --" },
+          "refId": "A",
+          "scenarioId": "random_walk",
+          "alias": "A-series",
+          "min": 0,
+          "max": 100
+        },
+        {
+          "datasource": { "type": "grafana-testdata-datasource", "uid": "-- Grafana --" },
+          "refId": "B",
+          "scenarioId": "random_walk",
+          "alias": "B-series",
+          "min": 20,
+          "max": 90
+        },
+        {
+          "datasource": { "type": "grafana-testdata-datasource", "uid": "-- Grafana --" },
+          "refId": "C",
+          "scenarioId": "random_walk",
+          "alias": "C-series",
+          "min": 40,
+          "max": 95
+        }
+      ],
       "options": {
-        "panelName": "Backup Service",
-        "emblem": "💾",
+        "panelName": "Linux Server",
+        "emblem": "🐧",
         "modePanel": "line",
-        "statePanel": "na",
+        "statePanel": "enable",
         "switchToNaOnError": true,
-        "dataErrorMessage": "No data available",
+        "dataErrorMessage": "",
         "fontSizeTitle": 18,
         "fontSizeMetrics": 12,
         "cornerRadius": 20,
@@ -418,26 +354,11 @@
         "soundSettings": {
           "volume": 70,
           "soundConfig": {
-            "information": {
-              "mode": "builtin",
-              "customUrl": ""
-            },
-            "warning": {
-              "mode": "builtin",
-              "customUrl": ""
-            },
-            "average": {
-              "mode": "builtin",
-              "customUrl": ""
-            },
-            "high": {
-              "mode": "builtin",
-              "customUrl": ""
-            },
-            "disaster": {
-              "mode": "custom",
-              "customUrl": "https://storage.yandexcloud.net/alfaleasing/Grafana/Kaspersky_pig.mp3"
-            }
+            "information": { "mode": "builtin", "customUrl": "" },
+            "warning": { "mode": "builtin", "customUrl": "" },
+            "average": { "mode": "builtin", "customUrl": "" },
+            "high": { "mode": "builtin", "customUrl": "" },
+            "disaster": { "mode": "custom", "customUrl": "https://storage.yandexcloud.net/alfaleasing/Grafana/Kaspersky_pig.mp3" }
           }
         },
         "colorOK": "#1eff00",
@@ -451,29 +372,85 @@
         "textColorEnabled": true,
         "textColor": "#000000",
         "ruleConfig": {
-          "rules": []
+          "rules": [
+            {
+              "id": "a1b2c3d4-0003-0003-0003-000000000001",
+              "name": "CPU Utilization",
+              "order": 0,
+              "seriesMatch": "A-series",
+              "alias": "CPU",
+              "description": "CPU load of the Linux server",
+              "metricURL": "",
+              "displayMode": "number",
+              "showName": true,
+              "showValue": true,
+              "showRule": true,
+              "showOnlyOnThreshold": false,
+              "reverseLogic": false,
+              "unit": "percent",
+              "decimalPlaces": 1,
+              "numberThreshold": { "information": "", "warning": "50", "average": "70", "high": "85", "disaster": "95" },
+              "stringThreshold": { "information": "", "warning": "", "average": "", "high": "", "disaster": "" },
+              "logicExpress": false,
+              "logicalMode": "eq",
+              "logicExpressValue": ""
+            },
+            {
+              "id": "a1b2c3d4-0003-0003-0003-000000000002",
+              "name": "RAM Utilization",
+              "order": 1,
+              "seriesMatch": "B-series",
+              "alias": "RAM",
+              "description": "RAM usage of the Linux server",
+              "metricURL": "",
+              "displayMode": "number",
+              "showName": true,
+              "showValue": true,
+              "showRule": true,
+              "showOnlyOnThreshold": false,
+              "reverseLogic": false,
+              "unit": "percent",
+              "decimalPlaces": 1,
+              "numberThreshold": { "information": "", "warning": "60", "average": "75", "high": "88", "disaster": "95" },
+              "stringThreshold": { "information": "", "warning": "", "average": "", "high": "", "disaster": "" },
+              "logicExpress": false,
+              "logicalMode": "eq",
+              "logicExpressValue": ""
+            },
+            {
+              "id": "a1b2c3d4-0003-0003-0003-000000000003",
+              "name": "Disk Usage",
+              "order": 2,
+              "seriesMatch": "C-series",
+              "alias": "Disk",
+              "description": "Disk usage of the Linux server",
+              "metricURL": "",
+              "displayMode": "number",
+              "showName": true,
+              "showValue": true,
+              "showRule": true,
+              "showOnlyOnThreshold": false,
+              "reverseLogic": false,
+              "unit": "percent",
+              "decimalPlaces": 1,
+              "numberThreshold": { "information": "", "warning": "70", "average": "80", "high": "90", "disaster": "95" },
+              "stringThreshold": { "information": "", "warning": "", "average": "", "high": "", "disaster": "" },
+              "logicExpress": false,
+              "logicalMode": "eq",
+              "logicExpressValue": ""
+            }
+          ]
         }
       },
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
+      "fieldConfig": { "defaults": {}, "overrides": [] },
       "transformations": []
     }
   ],
   "refresh": "5s",
   "schemaVersion": 38,
-  "tags": [
-    "toropovav-status-panel",
-    "example"
-  ],
-  "templating": {
-    "list": []
-  },
-  "time": {
-    "from": "now-5m",
-    "to": "now"
-  },
+  "tags": ["toropovav-status-panel", "example"],
+  "templating": { "list": [] },
+  "time": { "from": "now-5m", "to": "now" },
   "timepicker": {},
   "timezone": "browser",
   "title": "Status Panel — Example Dashboard",

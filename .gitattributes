@@ -1,0 +1,13 @@
+# Default behavior
+* text=auto
+
+# Shell scripts must always use LF
+*.sh text eol=lf
+
+# These files are binary and should be left untouched
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
+*.zip binary
+*.svg binary
