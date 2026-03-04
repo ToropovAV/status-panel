@@ -30,7 +30,7 @@ from pathlib import Path
 # ── Constants ─────────────────────────────────────────────────────────────────
 
 OLD_PLUGIN_TYPE = "serrrios-statusoverview-panel"
-NEW_PLUGIN_TYPE = "status-panel"
+NEW_PLUGIN_TYPE = "toropovav-status-panel"
 
 THRESHOLD_KEYS = ("information", "warning", "average", "high", "disaster")
 

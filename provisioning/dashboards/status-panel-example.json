@@ -16,7 +16,7 @@
     },
     {
       "type": "panel",
-      "id": "status-panel",
+      "id": "toropovav-status-panel",
       "name": "Status Panel",
       "version": "1.0.0"
     }
@@ -32,7 +32,7 @@
   "panels": [
     {
       "id": 1,
-      "type": "status-panel",
+      "type": "toropovav-status-panel",
       "title": "",
       "gridPos": {
         "h": 6,
@@ -161,7 +161,7 @@
     },
     {
       "id": 2,
-      "type": "status-panel",
+      "type": "toropovav-status-panel",
       "title": "",
       "gridPos": {
         "h": 6,
@@ -380,7 +380,7 @@
     },
     {
       "id": 3,
-      "type": "status-panel",
+      "type": "toropovav-status-panel",
       "title": "",
       "gridPos": {
         "h": 6,
@@ -464,7 +464,7 @@
   "refresh": "5s",
   "schemaVersion": 38,
   "tags": [
-    "status-panel",
+    "toropovav-status-panel",
     "example"
   ],
   "templating": {

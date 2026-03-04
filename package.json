@@ -1,5 +1,5 @@
 {
-  "name": "status-panel",
+  "name": "toropovav-status-panel",
   "version": "1.0.0",
   "description": "Status Panel for Grafana 10+",
   "scripts": {

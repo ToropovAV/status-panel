@@ -1,7 +1,7 @@
 {
   "type": "panel",
   "name": "Status Panel",
-  "id": "status-panel",
+  "id": "toropovav-status-panel",
   "info": {
     "description": "Status Panel for Grafana — displays system status with configurable thresholds, alerts, and visual feedback",
     "author": {

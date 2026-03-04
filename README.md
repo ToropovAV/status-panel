@@ -113,13 +113,13 @@ A feature-rich Grafana panel plugin for monitoring system status with configurab
 2. Extract it into your Grafana plugins directory:
    ```bash
    # Default plugin directory on Linux
-   unzip status-panel-1.0.0.zip -d /var/lib/grafana/plugins/
+   unzip toropovav-status-panel-1.0.0.zip -d /var/lib/grafana/plugins/
    ```
 
 3. Allow unsigned plugins in `grafana.ini`:
    ```ini
    [plugins]
-   allow_loading_unsigned_plugins = status-panel
+   allow_loading_unsigned_plugins = toropovav-status-panel
    ```
 
 4. Restart Grafana:
@@ -133,7 +133,7 @@ A feature-rich Grafana panel plugin for monitoring system status with configurab
 
 ```bash
 git clone https://github.com/ToropovAV/status-panel.git
-cd status-panel
+cd toropovav-status-panel
 npm install
 npm run build
 ```
@@ -281,7 +281,7 @@ If you have existing dashboards built with the old plugin, use the included migr
 - Removes legacy fields: `label`, `shortAlias`, `showMembers`, `isTemplated`, `enabled`, `clickThroughOpenNewTab`, `clickThroughSanitize`
 - Renames color fields: `ColorOK` → `colorOK`, etc.
 - Sets default values for all new fields (`soundSettings`, `iconType`, `fontSizeTitle`, etc.)
-- Changes panel type: `serrrios-statusoverview-panel` → `status-panel`
+- Changes panel type: `serrrios-statusoverview-panel` → `toropovav-status-panel`
 
 ### Usage
 
