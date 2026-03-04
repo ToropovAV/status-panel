@@ -21,7 +21,9 @@
       "version": "1.0.0"
     }
   ],
-  "annotations": { "list": [] },
+  "annotations": {
+    "list": []
+  },
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
@@ -32,11 +34,22 @@
       "id": 1,
       "type": "status-panel",
       "title": "",
-      "gridPos": { "h": 6, "w": 8, "x": 0, "y": 0 },
-      "datasource": { "type": "grafana-testdata-datasource", "uid": "-- Grafana --" },
+      "gridPos": {
+        "h": 6,
+        "w": 8,
+        "x": 0,
+        "y": 0
+      },
+      "datasource": {
+        "type": "grafana-testdata-datasource",
+        "uid": "-- Grafana --"
+      },
       "targets": [
         {
-          "datasource": { "type": "grafana-testdata-datasource", "uid": "-- Grafana --" },
+          "datasource": {
+            "type": "grafana-testdata-datasource",
+            "uid": "-- Grafana --"
+          },
           "refId": "A",
           "scenarioId": "random_walk",
           "alias": "CPU Utilization",
@@ -45,7 +58,7 @@
         }
       ],
       "options": {
-        "panelName": "Web Server",
+        "panelName": "Grafana",
         "emblem": "🖥",
         "modePanel": "line",
         "statePanel": "enable",
@@ -57,33 +70,48 @@
         "colorizeMetrics": true,
         "showTimestamp": true,
         "timestampFormat": "relative",
-        "iconType": "none",
-        "iconBuiltin": "",
+        "iconType": "builtin",
+        "iconBuiltin": "grafana",
         "iconUrl": "",
         "iconSize": 20,
-        "dataLink": "",
+        "dataLink": "https://grafana.com/",
         "openLinkInNewTab": true,
         "blink": true,
         "blinkDuration": 10,
-        "soundEnabled": false,
+        "soundEnabled": true,
         "soundSettings": {
           "volume": 70,
           "soundConfig": {
-            "information": { "mode": "builtin", "customUrl": "" },
-            "warning":     { "mode": "builtin", "customUrl": "" },
-            "average":     { "mode": "builtin", "customUrl": "" },
-            "high":        { "mode": "builtin", "customUrl": "" },
-            "disaster":    { "mode": "custom",  "customUrl": "" }
+            "information": {
+              "mode": "builtin",
+              "customUrl": ""
+            },
+            "warning": {
+              "mode": "builtin",
+              "customUrl": ""
+            },
+            "average": {
+              "mode": "builtin",
+              "customUrl": ""
+            },
+            "high": {
+              "mode": "builtin",
+              "customUrl": ""
+            },
+            "disaster": {
+              "mode": "custom",
+              "customUrl": "https://storage.yandexcloud.net/alfaleasing/Grafana/Kaspersky_pig.mp3"
+            }
           }
         },
-        "colorOK":          "#1eff00",
-        "colorInformation":  "#5794F2",
-        "colorWarning":      "#faf82a",
-        "colorAverage":      "#ffa230",
-        "colorHigh":         "#fa6400fc",
-        "colorDisaster":     "#ff0000",
-        "colorDisable":      "#6E6E6E",
-        "colorNa":           "#B0B0B0",
+        "colorOK": "#1eff00",
+        "colorInformation": "#5794F2",
+        "colorWarning": "#faf82a",
+        "colorAverage": "#ffa230",
+        "colorHigh": "#fa6400fc",
+        "colorDisaster": "#ff0000",
+        "colorDisable": "#6E6E6E",
+        "colorNa": "#B0B0B0",
         "textColorEnabled": true,
         "textColor": "#000000",
         "ruleConfig": {
@@ -92,7 +120,7 @@
               "id": "a1b2c3d4-0001-0001-0001-000000000001",
               "name": "CPU Utilization",
               "order": 0,
-              "seriesMatch": "CPU Utilization",
+              "seriesMatch": ".*series",
               "alias": "CPU",
               "description": "Current CPU load of the web server",
               "metricURL": "",
@@ -125,18 +153,32 @@
           ]
         }
       },
-      "fieldConfig": { "defaults": {}, "overrides": [] },
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
       "transformations": []
     },
     {
       "id": 2,
       "type": "status-panel",
       "title": "",
-      "gridPos": { "h": 6, "w": 8, "x": 8, "y": 0 },
-      "datasource": { "type": "grafana-testdata-datasource", "uid": "-- Grafana --" },
+      "gridPos": {
+        "h": 6,
+        "w": 8,
+        "x": 8,
+        "y": 0
+      },
+      "datasource": {
+        "type": "grafana-testdata-datasource",
+        "uid": "-- Grafana --"
+      },
       "targets": [
         {
-          "datasource": { "type": "grafana-testdata-datasource", "uid": "-- Grafana --" },
+          "datasource": {
+            "type": "grafana-testdata-datasource",
+            "uid": "-- Grafana --"
+          },
           "refId": "A",
           "scenarioId": "random_walk",
           "alias": "CPU Utilization",
@@ -144,7 +186,10 @@
           "max": 100
         },
         {
-          "datasource": { "type": "grafana-testdata-datasource", "uid": "-- Grafana --" },
+          "datasource": {
+            "type": "grafana-testdata-datasource",
+            "uid": "-- Grafana --"
+          },
           "refId": "B",
           "scenarioId": "random_walk",
           "alias": "RAM Utilization",
@@ -152,7 +197,10 @@
           "max": 90
         },
         {
-          "datasource": { "type": "grafana-testdata-datasource", "uid": "-- Grafana --" },
+          "datasource": {
+            "type": "grafana-testdata-datasource",
+            "uid": "-- Grafana --"
+          },
           "refId": "C",
           "scenarioId": "random_walk",
           "alias": "Disk Usage",
@@ -181,25 +229,40 @@
         "openLinkInNewTab": true,
         "blink": true,
         "blinkDuration": 10,
-        "soundEnabled": false,
+        "soundEnabled": true,
         "soundSettings": {
           "volume": 70,
           "soundConfig": {
-            "information": { "mode": "builtin", "customUrl": "" },
-            "warning":     { "mode": "builtin", "customUrl": "" },
-            "average":     { "mode": "builtin", "customUrl": "" },
-            "high":        { "mode": "builtin", "customUrl": "" },
-            "disaster":    { "mode": "custom",  "customUrl": "" }
+            "information": {
+              "mode": "builtin",
+              "customUrl": ""
+            },
+            "warning": {
+              "mode": "builtin",
+              "customUrl": ""
+            },
+            "average": {
+              "mode": "builtin",
+              "customUrl": ""
+            },
+            "high": {
+              "mode": "builtin",
+              "customUrl": ""
+            },
+            "disaster": {
+              "mode": "custom",
+              "customUrl": "https://storage.yandexcloud.net/alfaleasing/Grafana/Kaspersky_pig.mp3"
+            }
           }
         },
-        "colorOK":          "#1eff00",
-        "colorInformation":  "#5794F2",
-        "colorWarning":      "#faf82a",
-        "colorAverage":      "#ffa230",
-        "colorHigh":         "#fa6400fc",
-        "colorDisaster":     "#ff0000",
-        "colorDisable":      "#6E6E6E",
-        "colorNa":           "#B0B0B0",
+        "colorOK": "#1eff00",
+        "colorInformation": "#5794F2",
+        "colorWarning": "#faf82a",
+        "colorAverage": "#ffa230",
+        "colorHigh": "#fa6400fc",
+        "colorDisaster": "#ff0000",
+        "colorDisable": "#6E6E6E",
+        "colorNa": "#B0B0B0",
         "textColorEnabled": true,
         "textColor": "#000000",
         "ruleConfig": {
@@ -208,7 +271,7 @@
               "id": "a1b2c3d4-0002-0002-0002-000000000002",
               "name": "CPU Utilization",
               "order": 0,
-              "seriesMatch": "CPU Utilization",
+              "seriesMatch": "A-series",
               "alias": "CPU",
               "description": "CPU load of the database server",
               "metricURL": "",
@@ -228,7 +291,11 @@
                 "disaster": "95"
               },
               "stringThreshold": {
-                "information": "", "warning": "", "average": "", "high": "", "disaster": ""
+                "information": "",
+                "warning": "",
+                "average": "",
+                "high": "",
+                "disaster": ""
               },
               "logicExpress": false,
               "logicalMode": "eq",
@@ -238,7 +305,7 @@
               "id": "a1b2c3d4-0002-0002-0002-000000000003",
               "name": "RAM Utilization",
               "order": 1,
-              "seriesMatch": "RAM Utilization",
+              "seriesMatch": "B-series",
               "alias": "RAM",
               "description": "RAM usage of the database server",
               "metricURL": "",
@@ -258,7 +325,11 @@
                 "disaster": "95"
               },
               "stringThreshold": {
-                "information": "", "warning": "", "average": "", "high": "", "disaster": ""
+                "information": "",
+                "warning": "",
+                "average": "",
+                "high": "",
+                "disaster": ""
               },
               "logicExpress": false,
               "logicalMode": "eq",
@@ -268,7 +339,7 @@
               "id": "a1b2c3d4-0002-0002-0002-000000000004",
               "name": "Disk Usage",
               "order": 2,
-              "seriesMatch": "Disk Usage",
+              "seriesMatch": "C-series",
               "alias": "Disk",
               "description": "Disk usage of the database server",
               "metricURL": "",
@@ -288,7 +359,11 @@
                 "disaster": "95"
               },
               "stringThreshold": {
-                "information": "", "warning": "", "average": "", "high": "", "disaster": ""
+                "information": "",
+                "warning": "",
+                "average": "",
+                "high": "",
+                "disaster": ""
               },
               "logicExpress": false,
               "logicalMode": "eq",
@@ -297,15 +372,26 @@
           ]
         }
       },
-      "fieldConfig": { "defaults": {}, "overrides": [] },
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
       "transformations": []
     },
     {
       "id": 3,
       "type": "status-panel",
       "title": "",
-      "gridPos": { "h": 6, "w": 8, "x": 16, "y": 0 },
-      "datasource": { "type": "grafana-testdata-datasource", "uid": "-- Grafana --" },
+      "gridPos": {
+        "h": 6,
+        "w": 8,
+        "x": 16,
+        "y": 0
+      },
+      "datasource": {
+        "type": "grafana-testdata-datasource",
+        "uid": "-- Grafana --"
+      },
       "targets": [],
       "options": {
         "panelName": "Backup Service",
@@ -328,38 +414,66 @@
         "openLinkInNewTab": true,
         "blink": true,
         "blinkDuration": 10,
-        "soundEnabled": false,
+        "soundEnabled": true,
         "soundSettings": {
           "volume": 70,
           "soundConfig": {
-            "information": { "mode": "builtin", "customUrl": "" },
-            "warning":     { "mode": "builtin", "customUrl": "" },
-            "average":     { "mode": "builtin", "customUrl": "" },
-            "high":        { "mode": "builtin", "customUrl": "" },
-            "disaster":    { "mode": "custom",  "customUrl": "" }
+            "information": {
+              "mode": "builtin",
+              "customUrl": ""
+            },
+            "warning": {
+              "mode": "builtin",
+              "customUrl": ""
+            },
+            "average": {
+              "mode": "builtin",
+              "customUrl": ""
+            },
+            "high": {
+              "mode": "builtin",
+              "customUrl": ""
+            },
+            "disaster": {
+              "mode": "custom",
+              "customUrl": "https://storage.yandexcloud.net/alfaleasing/Grafana/Kaspersky_pig.mp3"
+            }
           }
         },
-        "colorOK":          "#1eff00",
-        "colorInformation":  "#5794F2",
-        "colorWarning":      "#faf82a",
-        "colorAverage":      "#ffa230",
-        "colorHigh":         "#fa6400fc",
-        "colorDisaster":     "#ff0000",
-        "colorDisable":      "#6E6E6E",
-        "colorNa":           "#B0B0B0",
+        "colorOK": "#1eff00",
+        "colorInformation": "#5794F2",
+        "colorWarning": "#faf82a",
+        "colorAverage": "#ffa230",
+        "colorHigh": "#fa6400fc",
+        "colorDisaster": "#ff0000",
+        "colorDisable": "#6E6E6E",
+        "colorNa": "#B0B0B0",
         "textColorEnabled": true,
         "textColor": "#000000",
-        "ruleConfig": { "rules": [] }
+        "ruleConfig": {
+          "rules": []
+        }
       },
-      "fieldConfig": { "defaults": {}, "overrides": [] },
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
       "transformations": []
     }
   ],
   "refresh": "5s",
   "schemaVersion": 38,
-  "tags": ["status-panel", "example"],
-  "templating": { "list": [] },
-  "time": { "from": "now-5m", "to": "now" },
+  "tags": [
+    "status-panel",
+    "example"
+  ],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-5m",
+    "to": "now"
+  },
   "timepicker": {},
   "timezone": "browser",
   "title": "Status Panel — Example Dashboard",
