@@ -36,7 +36,7 @@ THRESHOLD_KEYS = ("information", "warning", "average", "high", "disaster")
 
 # Old Color* option keys → (new camelCase key, default hex value)
 COLOR_MAP = {
-    "ColorOK":          ("colorOK",          "#1eff00"),
+    "ColorOK":          ("colorOK",          "#2cda01"),
     "ColorInformation": ("colorInformation",  "#5794F2"),
     "ColorWarning":     ("colorWarning",      "#faf82a"),
     "ColorAverage":     ("colorAverage",      "#ffa230"),
