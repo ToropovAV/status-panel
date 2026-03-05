@@ -3,7 +3,7 @@ import { StatusLevel, SoundConfig } from './types';
 // ─── Default Colors ───────────────────────────────────────────────────────────
 
 export const DEFAULT_COLORS: Record<StatusLevel, string> = {
-  ok: '#1eff00',
+  ok: '#2cda01',
   information: '#5794F2',
   warning: '#faf82a',
   average: '#ffa230',

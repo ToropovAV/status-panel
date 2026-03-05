@@ -196,7 +196,7 @@ Each status level has an individually configurable color:
 
 | Level | Default color |
 |---|---|
-| OK | `#1eff00` |
+| OK | `#2cda01` |
 | Information | `#5794F2` |
 | Warning | `#faf82a` |
 | Average | `#ffa230` |

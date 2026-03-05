@@ -97,7 +97,7 @@
             "disaster": { "mode": "custom", "customUrl": "https://storage.yandexcloud.net/alfaleasing/Grafana/Kaspersky_pig.mp3" }
           }
         },
-        "colorOK": "#1eff00",
+        "colorOK": "#2cda01",
         "colorInformation": "#5794F2",
         "colorWarning": "#faf82a",
         "colorAverage": "#ffa230",
@@ -210,7 +210,7 @@
             "disaster": { "mode": "custom", "customUrl": "https://storage.yandexcloud.net/alfaleasing/Grafana/Kaspersky_pig.mp3" }
           }
         },
-        "colorOK": "#1eff00",
+        "colorOK": "#2cda01",
         "colorInformation": "#5794F2",
         "colorWarning": "#faf82a",
         "colorAverage": "#ffa230",
@@ -361,7 +361,7 @@
             "disaster": { "mode": "custom", "customUrl": "https://storage.yandexcloud.net/alfaleasing/Grafana/Kaspersky_pig.mp3" }
           }
         },
-        "colorOK": "#1eff00",
+        "colorOK": "#2cda01",
         "colorInformation": "#5794F2",
         "colorWarning": "#faf82a",
         "colorAverage": "#ffa230",
