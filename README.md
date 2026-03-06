@@ -20,6 +20,7 @@
 
 A feature-rich Grafana panel plugin for monitoring system status with configurable thresholds, alert sounds, and visual feedback.
 
+![Panel animation](https://raw.githubusercontent.com/ToropovAV/status-panel/main/docs/screenshots/panel-animation.gif)
 ![Panel OK State](https://raw.githubusercontent.com/ToropovAV/status-panel/main/docs/screenshots/panel-ok.png)
 ![Panel with Metrics](https://raw.githubusercontent.com/ToropovAV/status-panel/main/docs/screenshots/panel-average.png)
 
