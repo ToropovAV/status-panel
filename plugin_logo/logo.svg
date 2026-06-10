@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1d2e"/>
+      <stop offset="100%" style="stop-color:#0f1117"/>
+    </linearGradient>
+    <linearGradient id="ok" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1eff00"/>
+      <stop offset="100%" style="stop-color:#14c400"/>
+    </linearGradient>
+    <linearGradient id="warn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#faf82a"/>
+      <stop offset="100%" style="stop-color:#d4d200"/>
+    </linearGradient>
+    <linearGradient id="avg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffa230"/>
+      <stop offset="100%" style="stop-color:#e07800"/>
+    </linearGradient>
+    <linearGradient id="dis" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff0000"/>
+      <stop offset="100%" style="stop-color:#cc0000"/>
+    </linearGradient>
+    <filter id="glow-ok">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-red">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="round">
+      <rect width="128" height="128" rx="22" ry="22"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="128" height="128" rx="22" ry="22" fill="url(#bg)"/>
+
+  <!-- Grid of status cells — 2 columns × 4 rows -->
+
+  <!-- Row 1: OK (large, spans 2 cols) -->
+  <rect x="10" y="10" width="108" height="22" rx="6" fill="url(#ok)" filter="url(#glow-ok)" opacity="0.95"/>
+  <!-- checkmark inside OK row -->
+  <polyline points="20,21 25,27 37,15" fill="none" stroke="#0a3d00" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- subtle label line -->
+  <rect x="46" y="17" width="40" height="3" rx="1.5" fill="#0a3d00" opacity="0.35"/>
+  <rect x="90" y="17" width="20" height="3" rx="1.5" fill="#0a3d00" opacity="0.25"/>
+
+  <!-- Row 2: left=OK, right=Warning -->
+  <rect x="10" y="37" width="52" height="20" rx="6" fill="url(#ok)" opacity="0.85"/>
+  <rect x="46" y="43" width="28" height="3" rx="1.5" fill="#0a3d00" opacity="0.3"/>
+
+  <rect x="66" y="37" width="52" height="20" rx="6" fill="url(#warn)" opacity="0.95"/>
+  <rect x="76" y="43" width="32" height="3" rx="1.5" fill="#4a4800" opacity="0.35"/>
+
+  <!-- Row 3: left=Average, right=Average -->
+  <rect x="10" y="62" width="52" height="20" rx="6" fill="url(#avg)" opacity="0.95"/>
+  <rect x="20" y="68" width="32" height="3" rx="1.5" fill="#4a2400" opacity="0.35"/>
+
+  <rect x="66" y="62" width="52" height="20" rx="6" fill="url(#avg)" opacity="0.75"/>
+  <rect x="76" y="68" width="22" height="3" rx="1.5" fill="#4a2400" opacity="0.3"/>
+
+  <!-- Row 4: left=OK, right=Disaster (highlighted) -->
+  <rect x="10" y="87" width="52" height="20" rx="6" fill="url(#ok)" opacity="0.8"/>
+  <rect x="20" y="93" width="28" height="3" rx="1.5" fill="#0a3d00" opacity="0.3"/>
+
+  <rect x="66" y="87" width="52" height="20" rx="6" fill="url(#dis)" filter="url(#glow-red)" opacity="0.95"/>
+  <!-- exclamation mark in disaster cell -->
+  <rect x="89" y="91" width="3" height="9" rx="1.5" fill="white" opacity="0.9"/>
+  <rect x="89" y="102" width="3" height="3" rx="1.5" fill="white" opacity="0.9"/>
+  <rect x="96" y="93" width="18" height="2.5" rx="1.2" fill="white" opacity="0.5"/>
+  <rect x="96" y="97" width="14" height="2.5" rx="1.2" fill="white" opacity="0.35"/>
+
+  <!-- Bottom separator line -->
+  <rect x="10" y="112" width="108" height="1.5" rx="0.75" fill="white" opacity="0.06"/>
+
+  <!-- Subtle border -->
+  <rect x="0.75" y="0.75" width="126.5" height="126.5" rx="21.5" ry="21.5"
+        fill="none" stroke="white" stroke-width="1.5" opacity="0.08"/>
+</svg>
